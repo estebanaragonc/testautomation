@@ -28,7 +28,7 @@ public class Login {
 		
 		WebElement username, password, submit;
 					
-		username = driver.findElement(By.id("login_field"));
+		username = driver.findElement(By.id("logi2n_field"));
 		username.sendKeys("este es mi usuario");
 		Thread.sleep(3000);
 		password =  driver.findElement(By.name("password"));
