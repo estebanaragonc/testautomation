@@ -37,6 +37,12 @@ public class Login {
 		submit = driver.findElement(By.name("commit"));
 		submit.click();
 		
+		
+		/*
+		 * 
+		 * added comments
+		 * 
+		 * */
 	}
 	 
 	@AfterSuite
