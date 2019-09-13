@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestSuiteDemo" verbose="1">
+	<test name="Test1">
+		 <packages>
+            <package name="com.automation.webDriverMaven.*" />
+        </packages>
+	</test>
+</suite>
