@@ -4,17 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.*;
+import org.testng.annotations.Test;
 
-
-public class Login {
-	
-	
-	public static WebDriver driver;
+public class NewTest {
+public static WebDriver driver;
 	
 	@BeforeSuite
 	public void setUp()
@@ -31,7 +26,7 @@ public class Login {
 		
 		WebElement username, password, submit;
 					
-		username = driver.findElement(By.id("login_fiseld"));
+		username = driver.findElement(By.id("login_field"));
 		username.sendKeys("este es mi usuario");
 		Thread.sleep(3000);
 		password =  driver.findElement(By.name("password"));//
@@ -54,5 +49,4 @@ public class Login {
 		driver.close();
 		driver.quit();
 	}
-
 }
