@@ -33,7 +33,7 @@ public class Login {
 		username = driver.findElement(By.id("login_field"));
 		username.sendKeys("este es mi usuario");
 		Thread.sleep(3000);
-		password =  driver.findElement(By.name("password"));
+		password =  driver.findElement(By.name("password"));//
 		password.sendKeys("esta es mi constraseña");
 		Thread.sleep(3000);
 		submit = driver.findElement(By.name("commit"));
