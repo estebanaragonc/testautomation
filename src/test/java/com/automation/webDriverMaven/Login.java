@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
@@ -16,8 +18,8 @@ public class Login {
 	@BeforeSuite
 	public void setUp()
 	{
-		System.setProperty("webdriver.chrome.driver", "C:\\Personal\\eclipse\\webDriverMaven\\driver\\chromedriver_win32\\chromedriver.exe");
-		driver =  new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver", ".\\driver\\chromedriver_win32\\chromedriver.exe");
+		driver = new  ChromeDriver();
 	}
 	
 	@Test
@@ -28,7 +30,7 @@ public class Login {
 		
 		WebElement username, password, submit;
 					
-		username = driver.findElement(By.id("logi2n_field"));
+		username = driver.findElement(By.id("login_field"));
 		username.sendKeys("este es mi usuario");
 		Thread.sleep(3000);
 		password =  driver.findElement(By.name("password"));
