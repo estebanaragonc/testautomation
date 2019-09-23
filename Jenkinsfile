@@ -10,46 +10,22 @@ pipeline {
       parallel {
         stage('Unit') {
           steps {
-            bat 'cls'
+            bat 'clean -Dtest=Unit test'
           }
         }
         stage('Regression') {
           steps {
-            bat 'cls'
-          }
-        }
-        stage('Performance') {
-          steps {
-            bat 'cls'
+            bat 'clean -Dtest=Regression test'
           }
         }
         stage('Login ') {
           steps {
-            bat 'cls'
-          }
-        }
-      }
-    }
-    stage('Browsers') {
-      parallel {
-        stage('Chrome') {
-          steps {
-            bat 'cls'
-          }
-        }
-        stage('IE') {
-          steps {
-            bat 'cls'
+            bat 'clean -Dtest=Login test'
           }
         }
       }
     }
     stage('QA') {
-      steps {
-        input(message: 'Deploy?', ok: 'ok', submitter: 'Elvis Aragón')
-      }
-    }
-    stage('Deploy Disney server') {
       steps {
         bat 'cls'
       }
