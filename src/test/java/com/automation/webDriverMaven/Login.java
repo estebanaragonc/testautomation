@@ -29,7 +29,7 @@ public class Login {
 	@Test
 	public void doLogin() throws InterruptedException 
 	{
-		//comment moreed
+		//comment moree
 		driver.get("https://github.com/login");
 		System.out.println("########## NORMAL ##########");
 		WebElement username, password, submit;
