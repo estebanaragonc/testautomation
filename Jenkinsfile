@@ -10,17 +10,17 @@ pipeline {
       parallel {
         stage('Unit') {
           steps {
-            bat 'clean -Dtest=Unit test'
+            bat 'mvn clean -Dtest=Unit test'
           }
         }
         stage('Regression') {
           steps {
-            bat 'clean -Dtest=Regression test'
+            bat 'mvn clean -Dtest=Regression test'
           }
         }
         stage('Login ') {
           steps {
-            bat 'clean -Dtest=Login test'
+            bat 'mvn clean -Dtest=Login test'
           }
         }
       }
