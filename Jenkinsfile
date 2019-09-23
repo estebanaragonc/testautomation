@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('Preparing') {
+    stage('Prepare') {
       steps {
         git(url: 'https://github.com/estebanaragonc/testautomation', branch: 'pipeline')
       }
