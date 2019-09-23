@@ -6,9 +6,52 @@ pipeline {
         git(url: 'https://github.com/estebanaragonc/testautomation', branch: 'pipeline')
       }
     }
-    stage('Unit') {
+    stage('Test') {
+      parallel {
+        stage('Unit') {
+          steps {
+            bat 'cls'
+          }
+        }
+        stage('Regression') {
+          steps {
+            bat 'cls'
+          }
+        }
+        stage('Performance') {
+          steps {
+            bat 'cls'
+          }
+        }
+        stage('Login ') {
+          steps {
+            bat 'cls'
+          }
+        }
+      }
+    }
+    stage('Browsers') {
+      parallel {
+        stage('Chrome') {
+          steps {
+            bat 'cls'
+          }
+        }
+        stage('IE') {
+          steps {
+            bat 'cls'
+          }
+        }
+      }
+    }
+    stage('QA') {
       steps {
-        bat 'mvn clean -Dtest=Unit test'
+        waitUntil()
+      }
+    }
+    stage('Deploy Disney server') {
+      steps {
+        bat 'cls'
       }
     }
   }
