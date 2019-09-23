@@ -46,7 +46,7 @@ pipeline {
     }
     stage('QA') {
       steps {
-        waitUntil()
+        input(message: 'Deploy?', ok: 'ok', submitter: 'Elvis Aragón')
       }
     }
     stage('Deploy Disney server') {
