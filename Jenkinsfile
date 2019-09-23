@@ -18,11 +18,6 @@ pipeline {
             bat 'mvn clean -Dtest=Regression test'
           }
         }
-        stage('Login ') {
-          steps {
-            bat 'mvn clean -Dtest=Login test'
-          }
-        }
       }
     }
     stage('QA') {
